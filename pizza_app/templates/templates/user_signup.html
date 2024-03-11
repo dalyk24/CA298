@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h2 class="text-center mb-4">Register</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="." method="POST" class="text-center">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; 2024 Killian Daly. All rights reserved.</p>
+        </div>
+    </footer>
+
+{% endblock %}

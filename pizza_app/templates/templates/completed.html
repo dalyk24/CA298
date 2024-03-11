@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h2 class="text-center mb-4">Pizza on the Way</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 shadow rounded custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ order.address }}</h5>
+                        <p class="card-text">Estimated Delivery: {{ order.order_time }}</p>
+                        <hr>
+                        <div class="row">
+                            <div class="col">
+                                <p class="card-text">Crust: {{ order.pizza.crust.name }}</p>
+                                <p class="card-text">Sauce: {{ order.pizza.sauce.name }}</p>
+                            </div>
+                            <div class="col">
+                                <p class="card-text">Cheese: {{ order.pizza.cheese.name }}</p>
+                                <p class="card-text">Size: {{ order.pizza.size.name }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">Toppings:</h6>
+                        <ul class="list-unstyled">
+                            {% if order.pizza.Chicken %}<li>Chicken</li>{% endif %}
+                            {% if order.pizza.Pepperoni %}<li>Pepperoni</li>{% endif %}
+                            {% if order.pizza.Mushrooms %}<li>Mushrooms</li>{% endif %}
+                            {% if order.pizza.Olives %}<li>Olives</li>{% endif %}
+                            {% if order.pizza.Ham %}<li>Ham</li>{% endif %}
+                            {% if order.pizza.Pineapple %}<li>Pineapple</li>{% endif %}
+                            {% if order.pizza.Peppers %}<li>Peppers</li>{% endif %}
+                            {% if order.pizza.Onion %}<li>Onion</li>{% endif %}
+                            {% if order.pizza.Sweetcorn %}<li>Sweetcorn</li>{% endif %}
+                            {% if order.pizza.Anchovies %}<li>Anchovies</li>{% endif %}
+                            {% if order.pizza.Pesto %}<li>Pesto</li>{% endif %}
+                            {% if order.pizza.Jalapeno %}<li>Jalapeno</li>{% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+{% endblock %}

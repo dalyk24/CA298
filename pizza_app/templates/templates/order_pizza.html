@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h2 class="text-center mb-4">Order Your Daily Slice</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="user" value="{{ request.user.id }}">
+        <input type="hidden" name="pizza" value="{{ request.user.pizza }}">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; 2024 Killian Daly. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}

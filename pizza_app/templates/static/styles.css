@@ -1,0 +1,267 @@
+/* base html styles */
+
+header {
+    background-color: #f9c62e; /* Yellow */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #d90d24; /* Red */
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    background-color: #d90d24; /* Red */
+    border-bottom: 2px solid #f9c62e; /* Yellow */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9c62e !important; /* Yellow */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-toggler-icon {
+    background-color: #f9c62e; /* Yellow */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #f9c62e !important; /* Yellow */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #f9c62e; /* Yellow */
+    color: #d90d24 !important; /* Red */
+}
+
+.container {
+    padding-top: 50px;
+}
+
+h2.text-center.mb-4 {
+    color: #d90d24; /* Red text */
+    text-align: center;
+    margin-top: -28px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* past orders styles */
+
+.custom-card {
+    background-color: #f9c62e; /* Yellow */
+    color: #fff; /* White text */
+    border: 2px solid #d90d24; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.custom-card .card-body {
+    padding: 20px;
+}
+
+.custom-card .card-title {
+    font-size: 30px;
+    color: #cc0000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.custom-card .card-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f1f1f; /* Black text */
+    text-shadow: none; /* Remove text shadow */
+}
+
+.custom-card .card-subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #cc0000 !important;
+    text-shadow: none; /* Remove text shadow */
+}
+
+.custom-card .list-unstyled {
+    columns: 4; /* Display toppings in columns of 4 */
+    margin-top: 10px;
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.custom-card .list-unstyled li {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f1f1f;
+    text-shadow: none; /* Remove text shadow */
+}
+
+/* create pizza styles */
+
+.custom-form {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    border: 2px solid #d90d24; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9c62e; /* Yellow background */
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 20px; /* Gap between columns */
+}
+
+.custom-form h3 {
+    color: #d90d24; /* Red text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+.custom-form select,
+.custom-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d90d24; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+.custom-form .toppings {
+    grid-column: span 2; /* Span across both columns */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display toppings in columns of 4 */
+    gap: 10px; /* Gap between checkboxes */
+}
+
+.custom-form .form-check {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #d90d24; /* Red button */
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;;
+    color: #fff; /* White text */
+    font-weight: bold;
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    background-color: #ff5e3a; /* Lighter red on hover */
+}
+
+
+/* order pizza style */
+
+form {
+    max-width: 600px; /* Increased width */
+    margin: 0 auto; /* Center the form */
+    padding: 30px;
+    border: 3px solid #d90d24; /* Thicker red border */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #f9c62e; /* Yellow background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d90d24; /* Red border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
+    margin-bottom: 20px;
+}
+
+#id_card_expiry_day {
+    display: none;
+}
+
+/* register page */
+
+.custom-form input[type="text"],
+.custom-form input[type="password"],
+.custom-form input[type="email"]
+.text-center input[type="text"],
+.text-center input[type="password"],
+.text-center input[type="email"]  {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d90d24; /* Red border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
+    margin-bottom: 20px; /* Increased spacing */
+}
+
+/* footer */
+
+.footer {
+    border-top: 2px solid #f9c62e;
+    background-color: #d90d24; /* Yellow background */
+    padding: 4px 0; /* Adjust padding as needed */
+    text-align: center;
+    margin-top: 84px;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #f9c62e; /* Black text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container-footer {
+    padding-top: 4px;
+}
+
+/* Custom styles for the About page */
+
+.col-md-6 {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.col-md-6 p {
+    font-size: 18px; /* Adjust paragraph font size */
+    line-height: 1.6; /* Adjust paragraph line height */
+    margin-bottom: 10px; /* Adjust spacing between paragraphs */
+}
+
+

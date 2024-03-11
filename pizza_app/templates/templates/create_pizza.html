@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h2 class="text-center mb-4">Pizza Creation</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST" class="custom-form">
+        {% csrf_token %}
+        
+        <!-- Add a hidden input field for the user -->
+        <input type="hidden" name="user" value="{{ request.user.id }}">
+        
+        <div class="form-group">
+            <label for="id_crust">Crust:</label>
+            <select name="crust" id="id_crust" class="form-control">
+                <option value="">- - - - - - - -</option>
+                {% for crust in form.crust.field.queryset %}
+                    <option value="{{ crust.pk }}">{{ crust.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="id_cheese">Cheese:</label>
+            <select name="cheese" id="id_cheese" class="form-control">
+                <option value="">- - - - - - - -</option>
+                {% for cheese in form.cheese.field.queryset %}
+                    <option value="{{ cheese.pk }}">{{ cheese.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="id_sauce">Sauce:</label>
+            <select name="sauce" id="id_sauce" class="form-control">
+                <option value="">- - - - - - - -</option>
+                {% for sauce in form.sauce.field.queryset %}
+                    <option value="{{ sauce.pk }}">{{ sauce.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="id_size">Size:</label>
+            <select name="size" id="id_size" class="form-control">
+                <option value="">- - - - - - - -</option>
+                {% for size in form.size.field.queryset %}
+                    <option value="{{ size.pk }}">{{ size.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="toppings"> <!-- Added a class to target the toppings section -->
+            {% for field in form.visible_fields %}
+                {% if field.name in topping_fields %}
+                    <div class="form-check">
+                        {{ field }}
+                        <label class="form-check-label" for="{{ field.auto_id }}">{{ field.label }}</label>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; 2024 Killian Daly. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}
